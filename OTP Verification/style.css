@@ -1,0 +1,123 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #151212;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(189, 186, 186, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+}
+
+.email-container input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #ebc65f;
+    cursor: not-allowed;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f3c2c2;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eedfdf;
+    border-radius: 3px;
+    width: 200px;
+}
+
+#sendOtpButton {
+    margin-bottom: 10px;
+}
+
+.popB {
+    display: flex;
+    justify-content: space-between;
+}
+
+#submitButton {
+    pointer-events: none;
+}
+
+#verifyOtpButton {
+    margin: 10px;
+    background-color: rgb(177, 244, 6);
+}
+
+#resendOtpButton {
+    margin: 10px;
+    background-color: red;
+}

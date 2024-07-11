@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("B0AM2VguRDBSbsJgQ"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required />
+            <label for="email">Email Id</label>
+            <div class="email-container">
+                <input type="email" id="email" name="email" required />
+                <button type="button" id="sendOtpButton">Send OTP</button>
+            </div>
+            <label for="mobileNo">Mobile No</label>
+            <input type="tel" id="mobileNo" name="mobileNo" required />
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit" id="submitButton" disabled>Submit</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <div id="otpPopup" class="popup">
+        <div class="popup-content">
+            <h3>Enter OTP</h3>
+            <input type="text" id="otpInput" placeholder="Enter OTP" />
+            <div class="popB">
+                <button id="verifyOtpButton">Verify OTP</button>
+                <button id="resendOtpButton">Resend OTP</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
